@@ -1,4 +1,4 @@
-# Forked to fix:
+# Forked to fix android screen not turn on issue:
 Original plugin won't turn screen on after acquire(), replacing the flag of calling powerManager.newWakeLock from 'PowerManager.SCREEN_FULL_WAKE_LOCK' to 'PowerManager.ACQUIRE_CAUSES_WAKEUP |  PowerManager.SCREEN_BRIGHT_WAKE_LOCK' to fix.
 
 ```java
