@@ -1,6 +1,18 @@
 # Forked to fix:
 Original plugin won't turn screen on after acquire(), replacing the flag of calling powerManager.newWakeLock from 'PowerManager.SCREEN_FULL_WAKE_LOCK' to 'PowerManager.ACQUIRE_CAUSES_WAKEUP |  PowerManager.SCREEN_BRIGHT_WAKE_LOCK' to fix.
 
+```java
+if( action.equals("acquire") ) {
+	if( args.length() > 0 && args.getBoolean(0) ) {
+		Log.d("PowerManagementPlugin", "Only dim lock" );
+		result = this.acquire( PowerManager.SCREEN_DIM_WAKE_LOCK );
+	}
+	else {
+		result = this.acquire( PowerManager.ACQUIRE_CAUSES_WAKEUP |  PowerManager.SCREEN_BRIGHT_WAKE_LOCK );
+	}
+}
+```
+
 PowerManagement
 ===============
 Plugin for Cordova (3.0+)
