@@ -1,3 +1,6 @@
+# Forked to fix:
+Original plugin won't turn screen on after acquire(), replacing the flag of calling powerManager.newWakeLock from 'PowerManager.SCREEN_FULL_WAKE_LOCK' to 'PowerManager.ACQUIRE_CAUSES_WAKEUP |  PowerManager.SCREEN_BRIGHT_WAKE_LOCK' to fix.
+
 PowerManagement
 ===============
 Plugin for Cordova (3.0+)
@@ -20,7 +23,7 @@ Install using npm:
 
 Install the plugin using the cordova command line utility:
 
-`$ cordova plugin add https://github.com/Viras-/cordova-plugin-powermanagement.git`
+`$ cordova plugin add https://github.com/zhubaitian/cordova-plugin-powermanagement.git`
 
 Usage
 -----
