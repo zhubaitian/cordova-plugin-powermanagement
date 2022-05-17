@@ -29,9 +29,6 @@ For details on power functionality see:
 
 Installation
 ---------
-Install using npm:
-
-`$ npm i cordova-plugin-powermanagement-orig`
 
 Install the plugin using the cordova command line utility:
 
